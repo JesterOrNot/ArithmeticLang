@@ -5,7 +5,7 @@ use lex::Token::Operator;
 use lex::Token::Whitespace;
 
 #[test]
-fn test_lex() {
+fn test_lex_1() {
     println!("Test lex()");
     assert_eq!(
         lex::lex(&String::from("   ")).unwrap(),
@@ -15,6 +15,10 @@ fn test_lex() {
             lex::Token::Whitespace(' ')
         ]
     );
+}
+
+#[test]
+fn test_lex_2() {
     assert_eq!(
         lex::lex(&String::from("535+5444  - 6 (4)")).unwrap(),
         vec![
@@ -33,3 +37,4 @@ fn test_lex() {
         ]
     )
 }
+

@@ -5,9 +5,7 @@ fn main() {
     let mut sum = 0;
     for i in tokens.iter() {
         match i {
-            Token::Number(n) => {
-                sum += n
-            },
+            Token::Number(n) => sum += n,
             _ => {}
         }
     }
